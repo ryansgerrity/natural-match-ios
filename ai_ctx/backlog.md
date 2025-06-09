@@ -1,210 +1,112 @@
-# Development Backlog - Natural Match iOS
+# 🗂️ Backlog (ONE story point per task)
 
-## 🎯 Current Sprint Goals
-**Sprint 1**: Foundation & Authentication (MVP Phase 1)
-- Complete user authentication system
-- Basic profile creation workflow
-- Photo upload functionality
+## Tickets
+| Ticket | Status  | Title                                  | Type | Tags        |
+|--------|---------|----------------------------------------|------|-------------|
+| TKT-01 | in-dev  | Birdie Voice-First Onboarding         | feat | ai, voice   |
+| TKT-02 | backlog | GPT-4o Personality Tagging System      | feat | ai, gpt     |
+| TKT-03 | backlog | 3-Second Intro Video Recording         | feat | media       |
+| TKT-04 | backlog | Location-Based Proximity Detection     | feat | location    |
+| TKT-05 | backlog | ¼-Mile Simultaneous Match Reveal       | feat | matching    |
+| TKT-06 | backlog | Supabase Backend Integration           | feat | backend     |
+| TKT-07 | backlog | Privacy-First Location Hashing         | feat | privacy     |
+| TKT-08 | backlog | Daily Hint Generation System           | feat | ai, hints   |
+| TKT-09 | backlog | Mutual Meet Coordination Flow          | feat | meeting     |
+| TKT-10 | backlog | Match Cap Management (3 active)        | feat | matching    |
+| TKT-11 | backlog | Voice Processing (Whisper ASR + TTS)   | feat | voice       |
+| TKT-12 | backlog | Auto-Deletion Privacy Compliance       | feat | privacy     |
 
-## 📋 Ticket Status Legend
-- 🔥 **High Priority** - Critical for MVP
-- ⚡ **Medium Priority** - Important but not blocking
-- 💡 **Low Priority** - Future enhancement
-- ✅ **Completed** - Done
-- 🚧 **In Progress** - Currently being worked on
-- 📝 **Ready** - Ready to start
-
----
-
-## 🚀 Sprint 1: Foundation & Authentication
-
-### ✅ COMPLETED
-
-#### NM-001: Project Setup
-- ✅ Create GitHub repository 
-- ✅ Set up Xcode project structure
-- ✅ Configure SwiftUI app with iOS 16+ support
-- ✅ Create welcome screen with pink theme
-- ✅ Set up asset catalogs and project configuration
-
-### 📝 READY TO START
-
-#### NM-002: Authentication System 🔥
-**Epic**: User can sign up and sign in to the app
-**Story Points**: 1 (broken down below)
-
-##### NM-002a: Sign Up Screen UI (1 SP)
-- Create SignUpView with SwiftUI
-- Form fields: email, password, confirm password
-- Validation UI states (error/success)
-- Navigation from welcome screen
-
-##### NM-002b: Sign In Screen UI (1 SP)
-- Create SignInView with SwiftUI  
-- Form fields: email, password
-- "Forgot Password" link
-- Navigation between sign up/sign in
-
-##### NM-002c: Authentication Service (1 SP)
-- Create AuthenticationManager class
-- Email/password validation logic
-- Basic user session management
-- Error handling for auth failures
-
-##### NM-002d: Keychain Integration (1 SP)
-- Store user credentials securely
-- Auto-login functionality
-- Logout capability
-- Handle keychain access errors
-
-#### NM-003: Basic Profile Creation 🔥
-**Epic**: User can create their dating profile
-**Story Points**: 1 (broken down below)
-
-##### NM-003a: Profile Model & Data (1 SP)
-- Create User/Profile data models
-- Core profile fields (name, age, bio)
-- Profile completion validation
-- Data persistence setup
-
-##### NM-003b: Profile Creation UI (1 SP)
-- Create ProfileCreationView
-- Form with basic profile fields
-- Progress indicator for completion
-- Save/continue navigation flow
-
-##### NM-003c: Profile Photo Upload (1 SP)
-- Photo picker integration
-- Image compression and validation
-- Multiple photo support (up to 6)
-- Photo reordering functionality
-
-##### NM-003d: Profile Preview & Edit (1 SP)
-- Profile preview screen
-- Edit profile capability
-- Profile completion percentage
-- Save changes functionality
-
----
-
-## 🎯 Sprint 2: Core Matching System
-
-### 📝 PLANNED
-
-#### NM-004: Personality Assessment ⚡
-**Epic**: Users complete personality questionnaire for matching
-
-##### NM-004a: Question Database (1 SP)
-- Create personality questions data model
-- Implement question categories (values, interests, lifestyle)
-- Question randomization logic
-- Scoring system foundation
-
-##### NM-004b: Assessment UI Flow (1 SP)
-- Multi-step questionnaire interface
-- Progress tracking and navigation
-- Question types (multiple choice, scale, etc.)
-- Save progress functionality
-
-##### NM-004c: Results Processing (1 SP)
-- Calculate personality scores
-- Generate compatibility metrics
-- Store assessment results
-- Update user profile with results
-
-#### NM-005: Basic Matching Algorithm ⚡
-**Epic**: System can generate compatible matches
-
-##### NM-005a: Compatibility Scoring (1 SP)
-- Implement basic compatibility algorithm
-- Weight different compatibility factors
-- Calculate match percentages
-- Minimum compatibility thresholds
-
-##### NM-005b: Match Discovery Interface (1 SP)
-- Create MatchesView with card interface
-- Swipe gestures for accept/decline
-- Match details and reasoning display
-- Empty state for no matches
-
-##### NM-005c: Match Management (1 SP)
-- Store match decisions (like/pass)
-- Mutual match detection
-- Match expiration logic
-- Match history tracking
-
----
-
-## 🎯 Sprint 3: Communication
-
-### 📝 PLANNED
-
-#### NM-006: Basic Messaging 💡
-**Epic**: Matched users can message each other
-
-##### NM-006a: Chat Data Model (1 SP)
-- Message data structure
-- Conversation threading
-- Message status (sent/delivered/read)
-- Media message support planning
-
-##### NM-006b: Chat Interface (1 SP)
-- Conversation list view
-- Individual chat screen
-- Message bubbles and formatting
-- Real-time message updates
-
-##### NM-006c: Message Sending (1 SP)
-- Text message composition
-- Send message functionality
-- Delivery confirmations
-- Offline message queuing
-
----
-
-## 🔮 Future Backlog (Not Prioritized)
-
-### NM-007: Advanced Features 💡
-- Video chat integration
-- Voice messages
-- Photo sharing in chat
-- Location-based matching
-- Date planning tools
-
-### NM-008: Safety & Verification 💡
-- Profile verification system
-- Report and block functionality
-- Content moderation
-- Safety tips and resources
-
-### NM-009: Performance & Polish 💡
-- App performance optimization
-- Advanced animations
-- Accessibility improvements
-- Analytics integration
-
----
-
-## 📊 Sprint Metrics
-
-### Sprint 1 Goals
-- **Target Velocity**: 8 story points
-- **Duration**: 2 weeks
-- **Key Milestone**: Functional authentication and basic profile creation
-
-### Definition of Done
-- ✅ Feature works on iOS simulator
-- ✅ Code follows Swift/SwiftUI best practices
-- ✅ Basic error handling implemented
-- ✅ UI matches design guidelines
-- ✅ Core functionality manually tested
-
-### Sprint Review Criteria
-- [ ] New users can sign up successfully
-- [ ] Returning users can sign in
-- [ ] Users can create and edit their profile
-- [ ] Photos can be uploaded and displayed
-- [ ] App navigation flows smoothly
+## Tasks
+| Task     | Ticket | Status  | Title                               | Acceptance Criteria                                    |
+|----------|--------|---------|------------------------------------|-------------------------------------------------------|
+| TASK-011 | TKT-01 | done    | Create BirdieChatView UI           | • Full-screen voice interface • Floating controls     |
+| TASK-012 | TKT-01 | in-dev  | Birdie avatar with speaking states  | • Idle/listening/speaking animations • Pulse effects  |
+| TASK-013 | TKT-01 | backlog | Mic toggle button functionality    | • Mute/unmute with visual feedback • Haptic response  |
+| TASK-014 | TKT-01 | backlog | End conversation button            | • Graceful exit • Save progress • Resume capability   |
+| TASK-015 | TKT-01 | backlog | Continuous voice recording          | • Stream audio chunks • No length limits             |
+| TASK-016 | TKT-01 | backlog | Real-time voice activity detection | • VAD silence detection • Auto mic management        |
+| TASK-017 | TKT-01 | backlog | Conversation state management      | • Pause/resume • Background handling • Session restore|
+| TASK-018 | TKT-01 | backlog | Onboarding progress tracking       | • Question completion % • Topic coverage metrics     |
+| TASK-019 | TKT-01 | backlog | Response logging & persistence     | • Store all Q&A pairs • Timestamp tracking          |
+| TASK-01A | TKT-01 | backlog | Interruption handling              | • User can interrupt Birdie • Graceful conversation  |
+| TASK-01B | TKT-01 | backlog | Audio feedback & confirmation      | • "Got it" responses • Clarification requests        |
+| TASK-01C | TKT-01 | backlog | Conversation flow branching        | • Dynamic follow-up questions • Context awareness    |
+| TASK-021 | TKT-02 | backlog | GPT-4o API client setup            | • API key management • Rate limiting • Error retry   |
+| TASK-022 | TKT-02 | backlog | Conversation analysis pipeline     | • Extract personality insights • Topic categorization |
+| TASK-023 | TKT-02 | backlog | Generate 250+ personality tags     | • JSONB storage • Tag confidence scores              |
+| TASK-024 | TKT-02 | backlog | Personality tag validation         | • Remove duplicates • Quality scoring • Min threshold|
+| TASK-025 | TKT-02 | backlog | Bio generation from tags           | • 40-60 words • Natural language • Fun facts         |
+| TASK-026 | TKT-02 | backlog | Bio quality & safety checks        | • Content moderation • Appropriateness scoring      |
+| TASK-027 | TKT-02 | backlog | Compatibility scoring engine       | • Cosine similarity • Tag weighting • Score caching |
+| TASK-028 | TKT-02 | backlog | Personality insights UI            | • Show tags to user • Edit/confirm capability        |
+| TASK-031 | TKT-03 | backlog | Video recording permission flow    | • Camera access • Permission explanations            |
+| TASK-032 | TKT-03 | backlog | 3-second video capture             | • Countdown timer • Auto-stop • Preview before save |
+| TASK-033 | TKT-03 | backlog | Video compression & optimization   | • <2MB target • H.264 encoding • Quality presets    |
+| TASK-034 | TKT-03 | backlog | Video upload to Supabase Storage   | • Progress indicators • Retry on failure • Checksums|
+| TASK-035 | TKT-03 | backlog | Video player component             | • Smooth playback • Tap to replay • Loading states  |
+| TASK-036 | TKT-03 | backlog | Video recording retry flow         | • Re-record option • Multiple attempts • Quality tips|
+| TASK-037 | TKT-03 | backlog | Video thumbnail generation         | • First frame capture • Fallback placeholder        |
+| TASK-041 | TKT-04 | backlog | Location permissions UI flow       | • Permission explanations • Settings deep-link       |
+| TASK-042 | TKT-04 | backlog | CoreLocation manager setup         | • Background/foreground modes • Power optimization   |
+| TASK-043 | TKT-04 | backlog | Proximity detection algorithm      | • ¼-mile threshold (400m) • Haversine calculation    |
+| TASK-044 | TKT-04 | backlog | Location update batching           | • 30-second intervals • Significant change only      |
+| TASK-045 | TKT-04 | backlog | GPS accuracy validation            | • Min accuracy 100m • Quality filtering              |
+| TASK-046 | TKT-04 | backlog | Location privacy hashing           | • 4-decimal precision • SHA256 hashing               |
+| TASK-047 | TKT-04 | backlog | Location data cleanup service      | • 24h auto-deletion • Background cleanup tasks       |
+| TASK-048 | TKT-04 | backlog | Proximity event logging            | • Track detection events • Analytics integration     |
+| TASK-051 | TKT-05 | backlog | Proximity threshold monitoring     | • Real-time distance calculation • Multi-user sync   |
+| TASK-052 | TKT-05 | backlog | Simultaneous reveal coordination   | • Both users triggered • Race condition handling     |
+| TASK-053 | TKT-05 | backlog | Match reveal UI animation          | • Card flip effect • Progressive disclosure          |
+| TASK-054 | TKT-05 | backlog | Bio & video display layout         | • Responsive design • Accessibility support          |
+| TASK-055 | TKT-05 | backlog | Meet button interaction            | • Mutual interest tracking • Response timeouts       |
+| TASK-056 | TKT-05 | backlog | Reveal notification system         | • Push notifications • In-app alerts                 |
+| TASK-057 | TKT-05 | backlog | Distance indicator component       | • Real-time updates • Visual proximity feedback      |
+| TASK-061 | TKT-06 | backlog | Supabase client configuration     | • Environment setup • API keys management            |
+| TASK-062 | TKT-06 | backlog | Authentication service integration | • Sign up/in flows • Token management                |
+| TASK-063 | TKT-06 | backlog | Database schema & migrations       | • User tables • Personality data • Match tracking    |
+| TASK-064 | TKT-06 | backlog | Storage bucket configuration       | • Video/photo policies • Auto-deletion rules         |
+| TASK-065 | TKT-06 | backlog | Real-time subscriptions setup     | • Birdie chat • Proximity events • Match updates     |
+| TASK-066 | TKT-06 | backlog | Error handling & retry logic       | • Network failures • Exponential backoff             |
+| TASK-067 | TKT-06 | backlog | Offline data synchronization      | • Local caching • Sync on reconnect                  |
+| TASK-071 | TKT-07 | backlog | Privacy-compliant location hashing | • 4-decimal GPS precision • SHA256 + salt            |
+| TASK-072 | TKT-07 | backlog | Automated data retention policies  | • Configurable deletion rules • Audit logging        |
+| TASK-073 | TKT-07 | backlog | 24h GPS data cleanup scheduler     | • Background task • Batch deletion • Error recovery  |
+| TASK-074 | TKT-07 | backlog | GDPR/CCPA data export functionality| • JSON export format • 30-day SLA • Complete dataset|
+| TASK-075 | TKT-07 | backlog | User data deletion on request      | • Account deletion • Cascading cleanup • Verification|
+| TASK-076 | TKT-07 | backlog | Privacy consent tracking           | • Consent timestamps • Granular permissions          |
+| TASK-077 | TKT-07 | backlog | Data anonymization service         | • Remove PII • Statistical aggregation               |
+| TASK-081 | TKT-08 | backlog | Location routine pattern analysis  | • ML clustering • Temporal patterns • 60% threshold  |
+| TASK-082 | TKT-08 | backlog | Venue database integration         | • POI lookup • Distance calculations • Ratings       |
+| TASK-083 | TKT-08 | backlog | Daily hint content generation      | • GPT venue descriptions • Personalized suggestions  |
+| TASK-084 | TKT-08 | backlog | Hint delivery scheduling           | • Max 1/day • Optimal timing • User preferences      |
+| TASK-085 | TKT-08 | backlog | Hint effectiveness tracking        | • Click-through rates • Meetup correlation           |
+| TASK-086 | TKT-08 | backlog | Birdie chat hint integration       | • Inline hint cards • Tap for map • History view     |
+| TASK-087 | TKT-08 | backlog | Anti-spam hint filtering           | • Quality scoring • Duplicate prevention             |
+| TASK-091 | TKT-09 | backlog | Mutual interest detection system   | • Both users "Yes" • Race condition handling         |
+| TASK-092 | TKT-09 | backlog | Meetup location suggestions        | • Midpoint calculation • Safety considerations       |
+| TASK-093 | TKT-09 | backlog | Birdie coordination chat flow      | • Dynamic responses • Time suggestions               |
+| TASK-094 | TKT-09 | backlog | Map integration for meetups        | • Apple Maps • Walking directions • ETA estimates    |
+| TASK-095 | TKT-09 | backlog | Meetup confirmation & tracking     | • Status updates • Arrival notifications             |
+| TASK-096 | TKT-09 | backlog | Safety features for meetups        | • Public venue suggestions • Emergency contacts      |
+| TASK-097 | TKT-09 | backlog | Post-meetup feedback collection    | • Rating system • Improvement suggestions            |
+| TASK-101 | TKT-10 | backlog | Match counter & enforcement        | • Real-time tracking • Prevent overflow              |
+| TASK-102 | TKT-10 | backlog | Archive selection interface        | • Match cards • Archive reasons • Confirmation       |
+| TASK-103 | TKT-10 | backlog | Match cap notification system      | • Full capacity alerts • Archive suggestions         |
+| TASK-104 | TKT-10 | backlog | Archived match management          | • View archived • Restore options • Permanent delete |
+| TASK-105 | TKT-10 | backlog | Match quality scoring              | • Engagement metrics • Auto-archive suggestions      |
+| TASK-106 | TKT-10 | backlog | Dynamic cap adjustment (Phase 2)   | • 2-4 range • User behavior analysis                 |
+| TASK-111 | TKT-11 | backlog | OpenAI Whisper API integration     | • Real-time streaming • Language detection           |
+| TASK-112 | TKT-11 | backlog | Voice activity detection (VAD)     | • Silence detection • Noise filtering                |
+| TASK-113 | TKT-11 | backlog | TTS voice selection & quality      | • Natural voices • Speed controls • Emotion          |
+| TASK-114 | TKT-11 | backlog | Audio streaming & buffering        | • Low latency • Smooth playback • Error recovery     |
+| TASK-115 | TKT-11 | backlog | Voice data encryption & security   | • End-to-end encryption • Secure deletion            |
+| TASK-116 | TKT-11 | backlog | Apple Speech framework fallback    | • Device-only processing • Privacy mode              |
+| TASK-117 | TKT-11 | backlog | Voice accessibility features       | • Hearing impaired support • Volume controls         |
+| TASK-121 | TKT-12 | backlog | Automated data cleanup scheduler   | • Cron jobs • Batch processing • Error monitoring    |
+| TASK-122 | TKT-12 | backlog | Media file lifecycle management    | • Upload tracking • Usage monitoring • Auto-deletion |
+| TASK-123 | TKT-12 | backlog | User consent & preference management| • Granular controls • Easy opt-out • Legal compliance|
+| TASK-124 | TKT-12 | backlog | Privacy audit logging              | • Deletion events • Access tracking • Compliance reports|
+| TASK-125 | TKT-12 | backlog | Data breach response automation    | • Detection systems • User notifications • Compliance|
 
 ---
 

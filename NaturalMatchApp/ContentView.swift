@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 30) {
                 Spacer()
                 
@@ -27,9 +27,7 @@ struct ContentView: View {
                 
                 // Action Buttons
                 VStack(spacing: 16) {
-                    Button(action: {
-                        // TODO: Implement sign up
-                    }) {
+                    NavigationLink(destination: BirdieChatView()) {
                         Text("Get Started")
                             .font(.headline)
                             .foregroundColor(.white)
